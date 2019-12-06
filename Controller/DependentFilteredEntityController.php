@@ -256,4 +256,13 @@ class DependentFilteredEntityController extends Controller
 
         return $name;
     }
+
+
+    /**
+     * @return Request
+     */
+    public function getRequest()
+    {
+        return $this->container->get('request_stack')->getCurrentRequest();
+    }
 }

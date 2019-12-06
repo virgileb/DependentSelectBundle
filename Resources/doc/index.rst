@@ -9,7 +9,7 @@ Configuration
 
 You should configure relationship between master and dependent fields for each pair:
 
-*In this example master entity - AcmeDemoBundle:Country, dependent - AcmeDemoBundle:Region*
+*In this example master entity - App\Entity\Country, dependent - App\Entity\Region*
 
 // app/config/config.yml
 
@@ -17,7 +17,7 @@ You should configure relationship between master and dependent fields for each p
 
     dependent_select:
         region_by_country:
-            class: AcmeDemoBundle:Region
+            class: App\Entity\Region
             parent_property: country
             property: title
             role: ROLE_USER
@@ -73,7 +73,7 @@ You can configure multiple dependent filters:
 
     dependent_select:
         region_by_country:
-            class: AcmeDemoBundle:Region
+            class: App\Entity\Region
             parent_property: country
             property: title
             role: ROLE_USER
@@ -81,7 +81,7 @@ You can configure multiple dependent filters:
             order_property: title
             order_direction: ASC
         town_by_region:
-            class: AcmeDemoBundle:Town
+            class: App\Entity\Town
             parent_property: region
             property: title
             role: ROLE_USER

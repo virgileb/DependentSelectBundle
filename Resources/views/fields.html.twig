@@ -24,7 +24,7 @@
                     url:"{{ path('dependent_select') }}",
                     success: function(msg){
                         if (msg != ''){
-                            jQuery("select#{{ form.vars.id }}").html(msg).show();
+                            jQuery("select#{{ form.vars.id }}").html(msg);
                             jQuery.each(jQuery("select#{{ form.vars.id }} option"), function (index, option){
                                 if (jQuery(option).val() == selected_index)
                                     jQuery(option).prop('selected', true);
